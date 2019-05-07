@@ -140,13 +140,13 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .logo {margin:16px 0 0 0; width:97px; height:39px}
     .title {margin:28px 0 0 30px; height:29px; padding:0 0 0 28px; font-size:16px}
     .header-menu-link {display:block; float:right; margin:30px 0 0 60px; position:relative; z-index:99}
-    .header-menu-link.fixed {position:fixed; right:43px; top:40px; width:86px; height:86px; margin:0; background:#163072; overflow:hidden}
+    .header-menu-link.fixed {position:fixed; right:0; top:0; width:64px; height:64px; margin:0; background:#163072; overflow:hidden}
     .mobile-menu-open .header-menu-link.fixed {position:relative; right:auto; top:auto; width:auto; height:auto; margin:30px 0 0 60px; background:none}
     .header-menu-link a {display:block; width:33px; height:25px; position:relative}
     .header-menu-link a svg {display:block; width:33px; height:25px}
     .header-menu-link a rect {fill:#163072; transition:all 0.2s}
     .header-menu-link a:hover rect {fill:#2045a5}
-    .header-menu-link.fixed a {position:absolute; left:27px; top:31px}
+    .header-menu-link.fixed a {position:absolute; left:15px; top:19px}
     .header-menu-link.fixed a rect {fill:#fff}
     .mobile-menu-open .header-menu-link.fixed a {position:relative; left:auto; top:auto; transform:none}
     .mobile-menu-open .header-menu-link.fixed a rect {fill:#163072}
@@ -167,7 +167,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .title {margin:36px 0 0 25px; height:auto; border-left:none; position:relative; padding:0 0 0 23px; line-height:19px; width:283px; font-weight:normal}
     .title::after {content:""; display:block; position:absolute; left:0; top:4px; height:30px; width:1px; background:#c4c4c4}
     .header-menu-link {margin:41px 0 0 0}
-    .header-menu-link.fixed {right:40px}
+    .header-menu-link.fixed {right:0}
     .mobile-menu-open .header-menu-link.fixed {right:auto; margin:41px 0 0 0; background:none}
     .header-menu-link a {width:39px; height:30px}
     .header-menu-link a svg {width:39px; height:30px}
@@ -182,7 +182,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .logo {margin:16px 0 0 0; width:100px; height:40px}
     .title {display:none}
     .header-menu-link {margin:28px 0 0 0}
-    .header-menu-link.fixed {top:27px; right:30px}
+    .header-menu-link.fixed {top:0; right:0}
     .header-menu-link a {width:33px; height:25px}
     .header-menu-link a svg {width:33px; height:25px}
 }
@@ -443,7 +443,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .index-legend-item {float:left; margin:0 0 0 87px}
 .index-legend-item:first-child {margin:0}
 .index-legend-item-logo {float:left; line-height:0}
-.index-legend-item-title {float:left; margin:0 0 0 10px; line-height:39px}
+.index-legend-item-title {float:left; margin:0 0 0 10px; line-height:30px}
 
 @media (max-width:1680px) {
     .index {padding:89px 0 0 0}
@@ -498,9 +498,10 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 }
 
 @media (max-width:1279px) {
-    .index-table {display:block; color:#323232; font-weight:500}
+    .index-table {display:block; color:#323232; font-weight:500; opacity:1}
     .index-table-headers {display:none}
-    .index-table-row {display:block; padding:37px 0 40px 0; border-top:1px solid #ededed}
+    .index-table-row {display:none; padding:37px 0 40px 0; border-top:1px solid #ededed}
+    .index-table-row.visible {display:block}
     .index-table-row:first-child {border:none}
     .index-table-mobile-header {display:block; position:absolute; left:53px; top:0; color:#5e5e5e; font-weight:normal}
     .index-table-name {display:block; position:relative; padding:0 138px 0 212px; border-top:none; width:auto; color:#323232}
@@ -530,6 +531,14 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
 @media (max-width:1279px) {
     .index-sign-in {padding:60px 0 0 0}
+}
+
+.index-mobile {display:none}
+
+@media (max-width:1279px) {
+    .index-desktop {display:none}
+    .index-mobile {display:block}
+    .index-more-btn {text-align:center; margin:60px 0 0 0}
 }
 
 .news {padding:125px 0 0 0}
@@ -594,6 +603,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .news-item {display:none; width:50%}
     .news-item.visible {display:inline-block}
     .news-item-inner {margin:20px 8px 21px 8px; box-shadow:none; border:none}
+    .news-item-inner:hover {box-shadow:none}
     .news-item-preview {height:232px}
     .news-more-btn {display:block; text-align:center; margin:30px 0 0 0}
     .news-item-content {padding:20px 0 0 0; height:225px}
@@ -607,6 +617,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .news-item-preview {height:244px}
     .news-item-text {max-height:185px}
     .news-item-inner {border:1px solid #ededed; box-shadow:0px 10px 20px rgba(0, 0, 0, 0.06)}
+    .news-item-inner:hover {box-shadow:0px 0px 10px rgba(0, 0, 0, 0.1)}
 }
 
 .analitic {padding:125px 0 0 0}
@@ -792,7 +803,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .stats-item-graph-donut {width:260px; height:260px}
     .stats-item-graph-bar-info-value {font-size:50px; line-height:65px}
     .stats-item-graph-bar-info-text {font-size:18px; line-height:23px; margin:10px 0 0 20px}
-    .stats-item-graph-bar-tips {font-size:23px; line-height:30px; bottom:11px}
+    .stats-item-graph-bar-tips {font-size:20px; line-height:30px; bottom:11px}
     .stats-item-title {font-size:20px; line-height:26px; padding:48px 0 0 0}
     .stats-item-graph-donut-info-value {font-size:50px; line-height:65px}
     .stats-item-graph-donut-info-text {font-size:18px; line-height:23px; margin:-1px 0 0 0}
@@ -802,18 +813,17 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .stats-item {width:50%}
 }
 
-@media (max-width:767px) {
-    .stats-content {white-space:nowrap}
-    .stats-item {width:360px; white-space:normal}
-    .stats-item-inner {width:360px; padding:0 100px 0 0}
-    .stats-content .slick-dots {position:relative; margin:0; padding:0; list-style:none; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
-    .stats-content .slick-dots li {margin:0; padding:0; display:inline-block; vertical-align:top; position:relative}
-    .stats-content .slick-dots li:before {display:none}
-    .stats-content .slick-dots li:first-child {margin:0}
-    .stats-content .slick-dots li button {display:block; position:relative; width:34px; height:34px; border-radius:0; border:none; background:transparent; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
-    .stats-content .slick-dots li button:before {content:""; display:block; width:8px; height:8px; position:absolute; left:50%; top:50%; margin:-4px 0 0 -4px; border-radius:50%; background:#163072; opacity:0.2; transition:all 0.2s}
-    .stats-content .slick-dots li.slick-active button:before {opacity:1}
-}
+.stats-content.slick-initialized {white-space:nowrap}
+.stats-content.slick-initialized .slick-list {overflow:visible}
+.stats-content.slick-initialized .stats-item {width:360px; white-space:normal; margin:0 auto}
+.stats-content.slick-initialized .stats-item-inner {width:360px; padding:0 50px}
+.stats-content .slick-dots {position:relative; margin:0; padding:0; list-style:none; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
+.stats-content .slick-dots li {margin:0; padding:0; display:inline-block; vertical-align:top; position:relative}
+.stats-content .slick-dots li:before {display:none}
+.stats-content .slick-dots li:first-child {margin:0}
+.stats-content .slick-dots li button {display:block; position:relative; width:34px; height:34px; border-radius:0; border:none; background:transparent; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.stats-content .slick-dots li button:before {content:""; display:block; width:8px; height:8px; position:absolute; left:50%; top:50%; margin:-4px 0 0 -4px; border-radius:50%; background:#163072; opacity:0.2; transition:all 0.2s}
+.stats-content .slick-dots li.slick-active button:before {opacity:1}
 
 .partners {padding:95px 0 0 0}
 .partners-list {white-space:nowrap; margin:49px -20px 0 -20px; position:relative; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px; padding:0 0 62px 0}
