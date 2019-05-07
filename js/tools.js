@@ -78,7 +78,8 @@ $(document).ready(function() {
                 $('.slider-prev').trigger('click');
             }
         },
-        threshold:0
+        threshold: 0,
+        allowPageScroll: 'auto'
     });
 
     function sliderAnimate(curIndex, newIndex) {
@@ -593,7 +594,8 @@ $(window).on('load resize', function() {
                 slidesToScroll: 1,
                 arrows: false,
                 dots: true,
-                variableWidth: true
+                variableWidth: true,
+                centerMode: true
             });
         }
     }
@@ -751,6 +753,58 @@ function windowOpen(linkWindow, dataWindow) {
                 'sitekey' : '6Ldk5DMUAAAAALWRTOM96EQI_0OApr59RQHoMirA'
             });
         }
+
+        $('.window-company-revenue-graph').each(function() {
+            var curGraph = $('.window-company-revenue-graph-inner');
+            var dataArray = [];
+            dataArray.push(['Name', 'Value', { role: 'annotation' }]);
+            for (var i = 0; i < dataRevenue.length; i++) {
+                dataArray.push([dataRevenue[i][0], dataRevenue[i][1], dataRevenue[i][2]]);
+            }
+
+            var data = google.visualization.arrayToDataTable(dataArray);
+
+            var options = {
+                legend: {position: 'none'},
+                annotations: {
+                    datum: {
+                        stem: {
+                            color: '#fff'
+                        }
+                    },
+                    highContrast: false,
+                    textStyle: {
+                        fontName: 'Roboto',
+                        fontSize: 14,
+                        color: '#fff',
+                        auraColor: 'transparent',
+                    }
+                },
+                colors: ['#163072'],
+                bar: {groupWidth: '90%'},
+                axisTitlesPosition: 'none',
+                enableInteractivity: false,
+                chartArea:{left: 0, top: 0, width: '100%', height: '80%'},
+                vAxis: {
+                    baselineColor: '#c4c4c4',
+                    baseline: 4,
+                    gridlines: {color: '#fff'},
+                    textPosition: 'none'
+                },
+                titlePosition: 'none',
+                hAxis: {
+                    baselineColor: '#c4c4c4',
+                    baseline: 4,
+                    textStyle:  {
+                        fontName: 'Roboto',
+                        fontSize: 16,
+                        color: '#6d6d6d'
+                    }
+                }
+            };
+            var chart = new google.visualization.ColumnChart(curGraph[0]);
+            chart.draw(data, options);
+        });
 
         if ($('.window-container img').length > 0) {
             $('.window-container img').each(function() {
