@@ -261,7 +261,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .slider-item {display:block; position:absolute; left:0; top:0; right:0; bottom:0; opacity:0; overflow:hidden}
 .slider-item.active {opacity:1}
 .slider-item-img {position:absolute; right:0; top:0; bottom:0}
-.slider-item-img img {display:block; height:100%; max-width:none}
+.slider-item-img img {display:block; height:100%; max-width:none; float:right}
 .slider-item-bg {position:absolute; right:843px; top:0; height:756px; width:1077px; background:url(../images/slider.png)}
 .slider-item-container {position:relative}
 .slider-item-title {font-weight:bold; font-size:54px; line-height:67px; letter-spacing:0; max-width:795px; padding:137px 0 0 0}
@@ -1223,7 +1223,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-company-revenue-value {font:48px/62px Roboto, sans-serif}
 .window-company-revenue-graph {margin:41px 0 0 0}
 .window-company-revenue-graph:after {content:""; display:block; clear:both}
-.window-company-revenue-graph-inner {float:left; width:291px; height:166px}
+.window-company-revenue-graph-inner {float:left; width:491px; height:166px}
 .window-company-revenue-graph-dinamic {float:left; margin:0 0 0 33px; font-size:28px; line-height:166px}
 .window-company-revenue-graph-dinamic-inner {display:inline-block; vertical-align:middle; line-height:28px}
 .window-company-revenue-graph-dinamic-value {display:inline-block; vertical-align:bottom}
@@ -1232,12 +1232,18 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-company-revenue-graph-dinamic-up .window-company-revenue-graph-dinamic-arrow rect {fill:#92e07e}
 .window-company-revenue-graph-dinamic-down .window-company-revenue-graph-dinamic-arrow rect {fill:#ff3f3f}
 
-@media (max-width:1279px) {
+@media (max-width:1680px) {
     .window-company-revenue-graph {margin-right:-85px}
+    .window-company-revenue-graph-inner {width:321px}
+}
+
+@media (max-width:1279px) {
+    .window-company-revenue-graph-inner {width:291px}
 }
 
 @media (max-width:767px) {
     .window-company-revenue-graph {margin-right:-20px}
+    .window-company-revenue-graph-dinamic {margin:0 0 0 10px}
 }
 
 .window-company-achievs-item {margin:20px 0}
