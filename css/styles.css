@@ -281,6 +281,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .slider-next svg {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%)}
 .slider-prev path,
 .slider-next path {fill:#163072}
+.slider-mobile-dots {display:none}
 
 @media (max-width:1680px) {
     .slider-list {height:568px}
@@ -312,6 +313,10 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .slider-item-bg {display:none}
     .slider-prev,
     .slider-next {visibility:hidden}
+    .slider-mobile-dots {display:block; position:absolute; left:0; right:0; bottom:27px; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; z-index:9}
+    .slider-mobile-dots a {display:inline-block; vertical-align:top; width:32px; height:32px; position:relative}
+    .slider-mobile-dots a:before {content:""; display:block; position:absolute; width:8px; height:8px; background:#fff; opacity:0.38; border-radius:50%; left:50%; top:50%; margin:-4px 0 0 -4px}
+    .slider-mobile-dots a.active:before {opacity:1}
     .slider-item-title {font-size:50px; line-height:64px; max-width:none; padding:153px 0 0 0; color:#fff}
     .slider-item-descr {font-size:20px; line-height:33px; max-width:none; padding:20px 0 0 0; color:#fff}
     .slider-item-inverse .slider-item-title {color:#313131}

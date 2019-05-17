@@ -28,6 +28,13 @@ $(document).ready(function() {
         var curSlider = $(this);
         curSlider.find('.slider-item').eq(0).addClass('active');
         if (curSlider.find('.slider-item').length > 1) {
+            var newHTML = '<div class="slider-mobile-dots">';
+            curSlider.find('.slider-item').each(function() {
+                newHTML += '<a href="#"></a>';
+            });
+            newHTML += '</div>';
+            curSlider.append(newHTML);
+            curSlider.find('.slider-mobile-dots a').eq(0).addClass('active');
             curSlider.find('.slider-prev, .slider-next').addClass('visible');
             curSlider.data('curIndex', 0);
             curSlider.data('isAnimate', false);
@@ -69,7 +76,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.slider').swipe({
+    $('.slider-list').swipe({
         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
             if (direction == 'left') {
                 $('.slider-next').trigger('click');
@@ -82,10 +89,24 @@ $(document).ready(function() {
         allowPageScroll: 'auto'
     });
 
+    $('body').on('click', '.slider-mobile-dots a', function(e) {
+        if (!$(this).hasClass('active')) {
+            window.clearTimeout(timerSlider);
+            timerSlider = null;
+            var curSlider = $('.slider');
+            var curIndex = curSlider.data('curIndex');
+            var newIndex = $('.slider-mobile-dots a').index($(this));
+            sliderAnimate(curIndex, newIndex);
+        }
+        e.preventDefault();
+    });
+
     function sliderAnimate(curIndex, newIndex) {
         var curSlider = $('.slider');
         if (!curSlider.data('isAnimate')) {
             curSlider.data('isAnimate', true);
+            curSlider.find('.slider-mobile-dots a.active').removeClass('active');
+            curSlider.find('.slider-mobile-dots a').eq(newIndex).addClass('active');
             curSlider.find('.slider-item').eq(curIndex).css({'z-index': 1});
             curSlider.find('.slider-item').eq(newIndex).css({'z-index': 2, 'opacity': 1});
             curSlider.find('.slider-item').eq(newIndex).find('.slider-item-bg').css({'opacity': 0});
