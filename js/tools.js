@@ -385,6 +385,11 @@ function createIndexMobile() {
         $('.index-mobile .index-table-row').eq(i).addClass('visible');
     }
     $('.index-mobile').data('lastIndex', indexSizeMobile - 1);
+    if ($('.index-mobile .index-table-row').length <= indexSizeMobile) {
+        $('.index-more-btn').addClass('invisible');
+    } else {
+        $('.index-more-btn').removeClass('invisible');
+    }
 }
 
 function updateGeo() {
@@ -465,8 +470,10 @@ $(window).on('load resize', function() {
         curList.find('.services-item').eq(1).addClass('visible');
         curList.find('.services-item').eq(2).addClass('visible');
         curList.data('lastIndex', 2);
-        if (curList.find('.services-item').length < 3) {
-            curList.find('.services-more-btn a').remove();
+        if (curList.find('.services-item:not(.visible)').length == 0) {
+            curList.parent().find('.services-more-btn').addClass('invisible');
+        } else {
+            curList.parent().find('.services-more-btn').removeClass('invisible');
         }
     });
 
@@ -551,15 +558,10 @@ $(window).on('load resize', function() {
         if ($(window).width() > 767) {
             curList.data('lastIndex', 3);
         }
-        if ($(window).width() > 767) {
-            if (curList.find('.news-item').length < 4) {
-                curList.find('.news-more-btn a').remove();
-            }
-        }
-        if ($(window).width() < 768) {
-            if (curList.find('.news-item').length < 3) {
-                curList.find('.news-more-btn a').remove();
-            }
+        if (curList.find('.news-item:not(.visible)').length == 0) {
+            curList.parent().find('.news-more-btn').addClass('invisible');
+        } else {
+            curList.parent().find('.news-more-btn').removeClass('invisible');
         }
     });
 
@@ -597,15 +599,10 @@ $(window).on('load resize', function() {
         if ($(window).width() > 767) {
             curList.data('lastIndex', 3);
         }
-        if ($(window).width() > 767) {
-            if (curList.find('.analitic-item').length < 4) {
-                curList.find('.analitic-more-btn a').remove();
-            }
-        }
-        if ($(window).width() < 768) {
-            if (curList.find('.analitic-item').length < 3) {
-                curList.find('.analitic-more-btn a').remove();
-            }
+        if (curList.find('.analitic-item:not(.visible)').length == 0) {
+            curList.parent().find('.analitic-more-btn').addClass('invisible');
+        } else {
+            curList.parent().find('.analitic-more-btn').removeClass('invisible');
         }
     });
 
@@ -670,8 +667,10 @@ $(window).on('load resize', function() {
         curList.find('.partners-item').eq(4).addClass('visible');
         curList.find('.partners-item').eq(5).addClass('visible');
         curList.data('lastIndex', 5);
-        if (curList.find('.partners-item').length < 7) {
-            curList.find('.partners-more-btn a').remove();
+        if (curList.find('.partners-item:not(.visible)').length == 0) {
+            curList.parent().find('.partners-more-btn').addClass('invisible');
+        } else {
+            curList.parent().find('.partners-more-btn').removeClass('invisible');
         }
     });
 
@@ -857,14 +856,14 @@ function windowOpen(linkWindow, dataWindow) {
                 annotations: {
                     datum: {
                         stem: {
-                            color: '#fff'
+                            color: 'transparent'
                         }
                     },
                     highContrast: false,
                     textStyle: {
                         fontName: 'Roboto',
                         fontSize: 14,
-                        color: '#fff',
+                        color: '#ccc',
                         auraColor: 'transparent',
                     }
                 },
@@ -872,17 +871,16 @@ function windowOpen(linkWindow, dataWindow) {
                 bar: {groupWidth: '90%'},
                 axisTitlesPosition: 'none',
                 enableInteractivity: false,
-                chartArea:{left: 0, top: 0, width: '100%', height: '80%'},
+                chartArea:{left: 0, top: 0, width: '100%', height: '70%'},
                 vAxis: {
                     baselineColor: '#c4c4c4',
-                    baseline: 4,
                     gridlines: {color: '#fff'},
-                    textPosition: 'none'
+                    textPosition: 'none',
+                    logScale: false
                 },
                 titlePosition: 'none',
                 hAxis: {
                     baselineColor: '#c4c4c4',
-                    baseline: 4,
                     textStyle:  {
                         fontName: 'Roboto',
                         fontSize: 16,

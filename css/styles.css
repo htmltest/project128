@@ -424,6 +424,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .services-item-ctrl {padding:37px 0 40px 0}
     .services-item-detail {margin:0 0 0 24px}
     .services-more-btn {display:block; text-align:center; margin:60px 0 0 0}
+    .services-more-btn.invisible {display:none}
 }
 
 @media (max-width:767px) {
@@ -537,6 +538,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .index-desktop {display:none}
     .index-mobile {display:block}
     .index-more-btn {text-align:center; margin:60px 0 0 0}
+    .index-more-btn.invisible {display:none}
 }
 
 .news {padding:125px 0 0 0}
@@ -604,6 +606,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .news-item-inner:hover {box-shadow:none}
     .news-item-preview {height:232px}
     .news-more-btn {display:block; text-align:center; margin:30px 0 0 0}
+    .news-more-btn.invisible {display:none}
     .news-item-content {padding:20px 0 0 0; height:225px}
     .news-item-text {max-height:205px}
 }
@@ -678,6 +681,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .analitic-item-inner {margin:20px 8px 21px 8px}
     .analitic-item-preview {height:232px}
     .analitic-more-btn {display:block; text-align:center; margin:30px 0 0 0}
+    .analitic-more-btn.invisible {display:none}
 }
 
 @media (max-width:767px) {
@@ -880,6 +884,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .partners-item.visible {display:inline-block}
     .partners-item-inner {margin:8px}
     .partners-more-btn {display:block; text-align:center; margin:32px 0 0 0}
+    .partners-more-btn.invisible {display:none}
 }
 
 @media (max-width:767px) {
@@ -1095,16 +1100,16 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-service-logo {line-height:0}
 .window-service h1 {margin:32px 0 16px 0}
 .window-service-text {font-size:24px; line-height:30px; margin:16px 0 32px 0}
-.window-service-steps {margin:64px 0 -27px 0; position:relative; text-align:justify; font-size:18px; line-height:27px; border-top:1px solid rgba(22, 48, 114, 0.4); padding:45px 0 0 0}
-.window-service-steps:after {content:""; display:inline-block; width:100%}
-.window-service-step {display:inline-block; vertical-align:top; position:relative; text-align:left; white-space:nowrap}
-.window-service-step:before {content:""; display:block; position:absolute; left:0; top:-45px; width:14px; height:14px; background:#163072; border-radius:50%; transform:translateY(-50%)}
+.window-service-steps {margin:64px 0 -27px 0; position:relative; font-size:18px; line-height:27px; border-top:1px solid rgba(22, 48, 114, 0.4); display:table; width:100%}
+.window-service-step {display:table-cell; vertical-align:top; position:relative; text-align:left; padding:45px 10px 0 0}
+.window-service-step:before {content:""; display:block; position:absolute; left:0; top:0; width:14px; height:14px; background:#163072; border-radius:50%; transform:translateY(-50%)}
 .window-service-step+.window-service-step:before {width:20px; height:20px}
 .window-service-step+.window-service-step+.window-service-step:before {width:26px; height:26px}
 .window-service-step+.window-service-step+.window-service-step+.window-service-step:before {width:32px; height:32px}
 .window-service-step-title {font-weight:500}
 .window-service-step-text {font-weight:300}
 .window-service-step-notice {font-weight:300; opacity:0.34; color:#000; padding:10px 0 0 0}
+.window-service-step:last-child {padding-right:0; text-align:right}
 .window-service-step:last-child:before {left:auto; right:0}
 .window-service-links {margin:55px 0 0 0}
 .window-service-links:after {content:""; display:block; clear:both}
@@ -1125,21 +1130,24 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
 @media (max-width:1680px) {
     .window-service {width:966px; padding:97px 115px 81px 115px}
+    .window-service-steps {font-size:16px; line-height:23px}
 }
 
 @media (max-width:1400px) {
     .window-service {width:864px; padding:97px 89px 116px 89px}
+    .window-service-steps {font-size:15px; line-height:21px}
 }
 
 @media (max-width:1279px) {
     .window-service {width:578px; padding:59px 85px 67px 85px}
     .window-service h1 {margin:32px 0 30px 0}
     .window-service-text {font-size:20px; line-height:34px; margin:30px 0 32px 0}
-    .window-service-steps {margin:72px 0 0 0; text-align:left; border-top:none; padding:0}
+    .window-service-steps {margin:72px 0 0 0; text-align:left; border-top:none; padding:0; font-size:18px; line-height:27px}
     .window-service-steps:before {content:""; display:block; position:absolute; left:50%; top:0; bottom:0; width:1px; margin-left:-1px; background:rgba(22, 48, 114, 0.4)}
     .window-service-steps:after {display:none}
     .window-service-step {display:block; width:50%; white-space:normal; padding:0 46px 0 0; margin:38px 0 0 0}
     .window-service-step:first-child {margin:0}
+    .window-service-step:last-child {padding-right:46px; text-align:left}
     .window-service-step:before {left:100%; top:15px; transform:translate(-50%, -50%); z-index:1}
     .window-service-step:first-child:after {content:""; display:block; position:absolute; left:100%; margin-left:-1px; top:0; height:8px; width:1px; background:#fff}
     .window-service-step:nth-child(even) {margin-left:50%; padding:0 0 0 46px}
@@ -1223,7 +1231,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-company-revenue-graph {margin:41px 0 0 0}
 .window-company-revenue-graph:after {content:""; display:block; clear:both}
 .window-company-revenue-graph-inner {float:left; width:491px; height:166px}
-.window-company-revenue-graph-dinamic {float:left; margin:0 0 0 33px; font-size:28px; line-height:166px}
+.window-company-revenue-graph-dinamic {float:left; margin:0 0 0 15px; font-size:28px; line-height:100px}
 .window-company-revenue-graph-dinamic-inner {display:inline-block; vertical-align:middle; line-height:28px}
 .window-company-revenue-graph-dinamic-value {display:inline-block; vertical-align:bottom}
 .window-company-revenue-graph-dinamic-arrow {display:inline-block; vertical-align:bottom}
