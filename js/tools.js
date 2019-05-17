@@ -461,6 +461,11 @@ $(window).on('load resize', function() {
             var curDotsWidth = curSlider.find('.slick-dots').width() + 60;
             curSlider.find('.slick-prev').css({'margin-right': curDotsWidth / 2});
             curSlider.find('.slick-next').css({'margin-left': curDotsWidth / 2});
+            if (curSlider.find('.slick-dots').length > 0) {
+                curSlider.removeClass('without-dots');
+            } else {
+                curSlider.addClass('without-dots');
+            }
         });
     }
 
@@ -543,6 +548,11 @@ $(window).on('load resize', function() {
             var curDotsWidth = curSlider.find('.slick-dots').width() + 60;
             curSlider.find('.slick-prev').css({'margin-right': curDotsWidth / 2});
             curSlider.find('.slick-next').css({'margin-left': curDotsWidth / 2});
+            if (curSlider.find('.slick-dots').length > 0) {
+                curSlider.removeClass('without-dots');
+            } else {
+                curSlider.addClass('without-dots');
+            }
         });
     }
 
@@ -584,6 +594,11 @@ $(window).on('load resize', function() {
             var curDotsWidth = curSlider.find('.slick-dots').width() + 60;
             curSlider.find('.slick-prev').css({'margin-right': curDotsWidth / 2});
             curSlider.find('.slick-next').css({'margin-left': curDotsWidth / 2});
+            if (curSlider.find('.slick-dots').length > 0) {
+                curSlider.removeClass('without-dots');
+            } else {
+                curSlider.addClass('without-dots');
+            }
         });
     }
 
@@ -655,6 +670,11 @@ $(window).on('load resize', function() {
             var curDotsWidth = curSlider.find('.slick-dots').width() + 60;
             curSlider.find('.slick-prev').css({'margin-right': curDotsWidth / 2});
             curSlider.find('.slick-next').css({'margin-left': curDotsWidth / 2});
+            if (curSlider.find('.slick-dots').length > 0) {
+                curSlider.removeClass('without-dots');
+            } else {
+                curSlider.addClass('without-dots');
+            }
         });
     }
 
