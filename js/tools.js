@@ -86,6 +86,8 @@ $(document).ready(function() {
             }
         },
         threshold: 0,
+        triggerOnTouchEnd: false,
+        triggerOnTouchLeave: true,
         allowPageScroll: 'auto'
     });
 
