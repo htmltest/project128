@@ -142,8 +142,10 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    updateIndex();
-    createIndexMobile();
+    if ($('.index').length > 0) {
+        updateIndex();
+        createIndexMobile();
+    }
 
     $('.index-more-btn a').click(function(e) {
         var curList = $('.index-mobile');
@@ -436,12 +438,14 @@ function updateGeo() {
 $(window).on('load resize scroll', function() {
 
     $('.nav').each(function() {
-        if ($(window).scrollTop() > $('.about').offset().top + $('.about').height()) {
-            $('.nav').addClass('fixed');
-            $('.header-menu-link').addClass('fixed');
-        } else {
-            $('.nav').removeClass('fixed');
-            $('.header-menu-link').removeClass('fixed');
+        if ($('.about').length > 0) {
+            if ($(window).scrollTop() > $('.about').offset().top + $('.about').height()) {
+                $('.nav').addClass('fixed');
+                $('.header-menu-link').addClass('fixed');
+            } else {
+                $('.nav').removeClass('fixed');
+                $('.header-menu-link').removeClass('fixed');
+            }
         }
 
         $('.nav li.active').removeClass('active');
@@ -719,15 +723,18 @@ $(window).on('load resize', function() {
 
 });
 
-google.charts.load('current', {'packages':['corechart']});
+if (document.getElementById('stats') !== null) {
 
-google.charts.setOnLoadCallback(drawChart1);
-google.charts.setOnLoadCallback(drawChart2);
-google.charts.setOnLoadCallback(drawChart3);
-google.charts.setOnLoadCallback(drawChart4);
-google.charts.setOnLoadCallback(drawChart5);
-google.charts.setOnLoadCallback(drawChart6);
-google.charts.setOnLoadCallback(redrawChart);
+    google.charts.load('current', {'packages':['corechart']});
+
+    google.charts.setOnLoadCallback(drawChart1);
+    google.charts.setOnLoadCallback(drawChart2);
+    google.charts.setOnLoadCallback(drawChart3);
+    google.charts.setOnLoadCallback(drawChart4);
+    google.charts.setOnLoadCallback(drawChart5);
+    google.charts.setOnLoadCallback(drawChart6);
+    google.charts.setOnLoadCallback(redrawChart);
+}
 
 function redrawChart() {
     window.onresize = function() {
