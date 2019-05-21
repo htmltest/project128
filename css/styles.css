@@ -484,19 +484,15 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .index-table-row:hover {color:#6d6d6d}
 .index-table-row:nth-child(odd) {background:#ededed}
 .index-table-name {display:table-cell; vertical-align:top; padding:21px 0 21px 20px; border-top:1px solid #ededed; width:35%; position:relative}
-.index-table-name:before {content:""; display:block; position:absolute; left:-1px; top:-1px; bottom:-1px; right:-1px; border:2px solid rgba(22, 48, 114, 0.6); border-right:none; opacity:0; transition:all 0.2s; z-index:1}
-.index-table-row:hover .index-table-name:before {opacity:1}
+.index-table-row:hover .index-table-name {border:2px solid rgba(22, 48, 114, 0.6); border-right:0; padding:20px 0 19px 18px}
 .index-table-name-logo {float:left; line-height:0; text-align:center; width:80px}
 .index-table-name-text {margin:0 0 0 117px; color:#1d1d1d}
 .index-table-geo {display:table-cell; vertical-align:top; padding:21px 0 21px 30px; border-top:1px solid #ededed; width:18%; position:relative}
-.index-table-geo:before {content:""; display:block; position:absolute; left:-1px; top:-1px; bottom:-1px; right:-1px; border:2px solid rgba(22, 48, 114, 0.6); border-left:none; border-right:none; opacity:0; transition:all 0.2s; z-index:1}
-.index-table-row:hover .index-table-geo:before {opacity:1}
+.index-table-row:hover .index-table-geo {border:2px solid rgba(22, 48, 114, 0.6); border-right:none; padding:20px 0 19px 30px; border-left:none}
 .index-table-sector {display:table-cell; vertical-align:top; padding:21px 0 21px 30px; border-top:1px solid #ededed; width:25%; position:relative}
-.index-table-sector:before {content:""; display:block; position:absolute; left:-1px; top:-1px; bottom:-1px; right:-1px; border:2px solid rgba(22, 48, 114, 0.6); border-left:none; border-right:none; opacity:0; transition:all 0.2s; z-index:1}
-.index-table-row:hover .index-table-sector:before {opacity:1}
+.index-table-row:hover .index-table-sector {border:2px solid rgba(22, 48, 114, 0.6); border-right:none; padding:20px 0 19px 30px; border-left:none}
 .index-table-achievs {display:table-cell; vertical-align:top; padding:24px 0 21px 30px; border-top:1px solid #ededed; width:22%; position:relative}
-.index-table-achievs:before {content:""; display:block; position:absolute; left:-1px; top:-1px; bottom:-1px; right:-1px; border:2px solid rgba(22, 48, 114, 0.6); border-left:none; opacity:0; transition:all 0.2s; z-index:1}
-.index-table-row:hover .index-table-achievs:before {opacity:1}
+.index-table-row:hover .index-table-achievs {border:2px solid rgba(22, 48, 114, 0.6); padding:23px 0 19px 30px; border-left:none}
 .index-table-achievs img {margin:0 12px 0 0}
 .index-table-mobile-header {display:none}
 
@@ -513,16 +509,16 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .index-table-row.visible {display:block}
     .index-table-row:first-child {border:none}
     .index-table-mobile-header {display:block; position:absolute; left:53px; top:0; color:#5e5e5e; font-weight:normal}
-    .index-table-name {display:block; position:relative; padding:0 138px 0 212px; border-top:none; width:auto; color:#323232}
-    .index-table-name:before {display:none}
+    .index-table-name,
+    .index-table-row:hover .index-table-name {display:block; position:relative; padding:0 138px 0 212px; border:none; width:auto; color:#323232}
     .index-table-name-logo {float:none; position:absolute; right:0; top:0; width:138px; text-align:left}
     .index-table-name-text {margin:0}
-    .index-table-geo {display:block; margin:12px 0 0 0; padding:0 138px 0 212px; border-top:none; width:auto; color:#323232}
-    .index-table-geo:before {display:none}
-    .index-table-sector {display:block; margin:12px 0 0 0; padding:0 138px 0 212px; border-top:none; width:auto; color:#323232}
-    .index-table-sector:before {display:none}
-    .index-table-achievs {display:block; margin:12px 0 0 0; padding:0 138px 0 212px; border-top:none; width:auto; min-height:27px; color:#323232}
-    .index-table-achievs:before {display:none}
+    .index-table-geo,
+    .index-table-row:hover .index-table-geo {display:block; margin:12px 0 0 0; padding:0 138px 0 212px; border:none; width:auto; color:#323232}
+    .index-table-sector,
+    .index-table-row:hover .index-table-sector {display:block; margin:12px 0 0 0; padding:0 138px 0 212px; border:none; width:auto; color:#323232}
+    .index-table-achievs,
+    .index-table-row:hover .index-table-achievs {display:block; margin:12px 0 0 0; padding:0 138px 0 212px; border:none; width:auto; min-height:27px; color:#323232}
     .index-table-achievs img {margin:4px 12px 0 0}
 }
 
@@ -1035,6 +1031,16 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .footer-feedback-mobile .btn:hover {background:#9c9c9c}
     .footer-feedback-mobile .btn:active {background:#9c9c9c}
     .footer-feedback-mobile .btn:before {background:#8a8a8a}
+}
+
+.up-link {visibility:hidden; opacity:0; position:fixed; right:40px; bottom:40px; z-index:99; width:60px; height:60px; background:#163072; transition:all 0.2s}
+.up-link:hover {background-color:#2045a5}
+.up-link.visible {visibility:visible; opacity:1}
+.up-link svg {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%) rotate(-90deg)}
+.up-link path {fill:#fff}
+
+@media (max-width:1400px) {
+    .up-link {display:none}
 }
 
 .window-open body {overflow:hidden}
