@@ -119,6 +119,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
 .header {border-bottom:1px solid #eee; padding:0 0 39px 0}
 .logo {float:left; margin:20px 0 0 0; width:162px; height:63px; background:url(../images/logo.svg) no-repeat; background-size:100%}
+.logo-en {background-image:url(../images/logo-en.svg); background-size:auto 100%}
 .title {float:left; margin:43px 0 0 33px; border-left:1px solid #c4c4c4; height:40px; padding:0 0 0 32px; color:#4e4e4e; font-weight:500; font-size:24px; line-height:40px}
 .header-menu-link {display:none}
 .header-login {float:right; margin:42px 0 0 0}
