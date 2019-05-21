@@ -923,6 +923,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
 .footer-info {float:left; width:25%; padding:44px 0 0 0}
 .footer-logo {width:136px; height:53px; background:url(../images/logo-footer.svg) no-repeat; background-size:100%}
+.footer-logo-en {background-image:url(../images/logo-footer-en.svg); background-size:auto 100%}
 .footer-info-text {font-size:20px; line-height:26px; font-weight:500; max-width:278px; padding:42px 0 0 0}
 .footer-info-text a {color:#fff; text-decoration:none}
 
