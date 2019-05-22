@@ -357,11 +357,10 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 }
 
 .services {padding:116px 0 0 0}
-.services-container {margin:49px -20px 0 -20px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
-.services-list {position:relative; width:100%; overflow:hidden; padding:0 0 62px 0}
-.services-list.without-dots {padding:0; margin-bottom:-80px}
+.services-container {margin:49px -20px 0 -20px; font-size:0; line-height:0; letter-spacing:-1px}
+.services-list {position:relative; width:100%; overflow:hidden}
 .services-item {display:inline-block; vertical-align:top; width:33.33%}
-.services-item-inner {margin:20px 20px 80px 20px; background:#fff; border:1px solid #ededed; box-shadow:0px 0px 10px rgba(0, 0, 0, 0.06); transition:box-shadow 0.2s}
+.services-item-inner {margin:20px; background:#fff; border:1px solid #ededed; box-shadow:0px 0px 10px rgba(0, 0, 0, 0.06); transition:box-shadow 0.2s}
 .services-item-inner:hover {box-shadow:0px 0px 10px rgba(0, 0, 0, 0.1)}
 .services-item-logo {height:321px; border-bottom:1px solid #ededed; line-height:320px; text-align:center}
 .services-item-logo img,
@@ -398,9 +397,8 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 @media (max-width:1680px) {
     .services {padding:81px 0 0 0}
     .services-container {margin:11px -10px 0 -10px}
-    .services-list {padding:0 0 52px 0}
     .services-list.without-dots {padding:0; margin-bottom:-50px}
-    .services-item-inner {margin:20px 10px 50px 10px}
+    .services-item-inner {margin:20px 10px 0 10px}
     .services-item-logo {height:225px; line-height:224px}
     .services-item-logo img {max-width:50%; max-height:50%}
     .services-item-text {padding:0 31px}

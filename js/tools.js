@@ -482,33 +482,6 @@ $(window).on('load resize scroll', function() {
 });
 
 $(window).on('load resize', function() {
-    if (!$('.services-list').hasClass('slick-slider')) {
-        $('.services-list').slick({
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            prevArrow: '<button type="button" class="slick-prev"><svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.22379 10L13 18.3777L11.6371 20L1.31134e-06 10L11.6371 1.52602e-06L13 1.62234L3.22379 10Z" /></svg></button>',
-            nextArrow: '<button type="button" class="slick-next"><svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.77621 10L1.16642e-06 1.62234L1.3629 1.52602e-06L13 10L1.36291 20L3.36361e-06 18.3777L9.77621 10Z" /></svg></button>',
-            dots: true,
-            responsive: [
-                {
-                    breakpoint: 1279,
-                    settings: 'unslick'
-                }
-            ]
-        }).on('setPosition', function(event, slick) {
-            var curSlider = $(this);
-            var curDotsWidth = curSlider.find('.slick-dots').width() + 60;
-            curSlider.find('.slick-prev').css({'margin-right': curDotsWidth / 2});
-            curSlider.find('.slick-next').css({'margin-left': curDotsWidth / 2});
-            if (curSlider.find('.slick-dots').length > 0) {
-                curSlider.removeClass('without-dots');
-            } else {
-                curSlider.addClass('without-dots');
-            }
-        });
-    }
-
     $('.services-list').each(function() {
         var curList = $(this);
         curList.find('.services-item').eq(0).addClass('visible');
