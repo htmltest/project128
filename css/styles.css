@@ -137,7 +137,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .header-lang {font-size:16px; margin:21px 54px 0 0}
 }
 
-@media (max-width:1400px) {
+@media (max-width:1279px) {
     .logo {margin:16px 0 0 0; width:97px; height:39px}
     .title {margin:28px 0 0 30px; height:29px; padding:0 0 0 28px; font-size:16px}
     .header-menu-link {display:block; float:right; margin:30px 0 0 60px; position:relative; z-index:99}
@@ -160,9 +160,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
     .mobile-menu-open {overflow:hidden}
     .mobile-menu-open .header {position:fixed; left:0; top:0; right:0; z-index:99; background:#fff}
-}
 
-@media (max-width:1279px) {
     .header {padding:0 0 37px 0}
     .logo {margin:24px 0 0 0; width:117px; height:47px}
     .title {margin:36px 0 0 25px; height:auto; border-left:none; position:relative; padding:0 0 0 23px; line-height:19px; width:283px; font-weight:normal}
@@ -206,13 +204,13 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .nav-inner ul {padding:0 12px; height:44px; line-height:44px; font-size:14px}
 }
 
-@media (max-width:1400px) {
+@media (max-width:1279px) {
     .nav {display:none}
 }
 
 .nav-mobile {display:none}
 
-@media (max-width:1400px) {
+@media (max-width:1279px) {
     .mobile-menu-open .nav-mobile {display:block; position:fixed; left:0; top:85px; right:0; bottom:0; z-index:98; background:rgba(255, 255, 255, 0.6)}
     .nav-mobile-inner {position:absolute; right:0; top:0; bottom:0; width:365px; padding:0 67px 0 88px; background:#fff url(../images/mobile-menu-bg.png) no-repeat left top; background-size:auto 100%; overflow:auto; box-shadow:-10px 0px 40px rgba(0, 0, 0, 0.1)}
     .nav-mobile-inner ul {margin:0; padding:40px 0 0 0; list-style:none; font-size:16px; line-height:21px}
@@ -227,9 +225,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .nav-mobile-social a:first-child {margin:0}
     .nav-mobile-social a img {display:inline-block; vertical-align:middle; max-width:12px; max-height:12px; margin:-3px 0 0 0}
     .nav-mobile-content {display:none}
-}
 
-@media (max-width:1279px) {
     .mobile-menu-open .nav-mobile {top:112px}
     .nav-mobile-inner {padding:0 70px}
     .nav-mobile-inner ul {padding:42px 0 0 0; font-size:18px; line-height:23px}
@@ -792,7 +788,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .stats-container {border-top:1px solid #c4c4c4; margin:131px 0 0 0}
 .stats-content {font-size:0; line-height:0; letter-spacing:-1}
 .stats-item {display:inline-block; vertical-align:top; width:33.33%; padding:110px 0 0 0}
-.stats-item-inner {width:365px}
+.stats-item-inner {width:365px; margin:0 auto}
 .stats-item-graph {height:365px; position:relative}
 .stats-item-graph-bar {position:absolute; left:0; bottom:0; width:365px; height:244px}
 .stats-item-graph-bar-info {position:absolute; left:0; top:3px}
@@ -1039,7 +1035,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .up-link svg {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%) rotate(-90deg)}
 .up-link path {fill:#fff}
 
-@media (max-width:1400px) {
+@media (max-width:1279px) {
     .up-link {display:none}
 }
 
@@ -1288,3 +1284,5 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-company-geo:after {content:""; display:block; clear:both}
 .window-company-geo-item {float:left; height:45px; border:1px solid #dadada; margin:0 -1px -1px 0; min-width:162px; padding:0 11px}
 .window-company-geo-item img {display:inline-block; vertical-align:middle; margin:-4px 10px 0 0}
+
+.source-text {text-align:center; padding:20px 0 0 0; color:#999; font-size:15px}
