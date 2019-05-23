@@ -201,7 +201,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
 @media (max-width:1680px) {
     .nav {height:45px}
-    .nav-inner ul {padding:0 12px; height:44px; line-height:44px; font-size:14px}
+    .nav-inner ul {padding:0 12px; height:44px; line-height:44px; font-size:16px}
 }
 
 @media (max-width:1279px) {
@@ -366,7 +366,10 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .services-item-text {padding:0 40px; white-space:normal}
 .services-item-title {font-weight:500; font-size:24px; line-height:32px; letter-spacing:0; color:#000; padding:41px 0 0 0}
 .services-item-anonce {font-weight:300; font-size:20px; line-height:32px; letter-spacing:0; padding:19px 0 0 0}
-.services-item-ctrl {padding:56px 40px 36px 40px}
+.services-item-anonce ul {margin:0}
+.services-item-anonce li {margin:0; padding:0 0 0 20px}
+.services-item-anonce li:before {width:6px; height:6px; top:14px}
+.services-item-ctrl {padding:41px 40px 36px 40px}
 .services-item-ctrl:after {content:""; display:block; clear:both}
 .services-item-order {float:left}
 .services-item-order .btn {text-transform:none; font-weight:normal}
@@ -402,7 +405,8 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .services-item-text {padding:0 31px}
     .services-item-title {font-size:20px; line-height:26px; padding:29px 0 0 0}
     .services-item-anonce {font-size:17px; line-height:27px; padding:11px 0 0 0}
-    .services-item-ctrl {padding:58px 31px 30px 31px}
+    .services-item-anonce li:before {top:11px}
+    .services-item-ctrl {padding:19px 31px 30px 31px}
     .services-item-order .btn {height:38px; line-height:38px}
     .services-item-detail {margin:0 0 0 36px; font-size:15px; line-height:38px}
     .services-list .slick-prev,
@@ -428,7 +432,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .services-item-content {padding:0 35px 0 69px; display:table-cell; vertical-align:top}
     .services-item-text {padding:0}
     .services-item-title {padding:36px 0 0 0}
-    .services-item-ctrl {padding:37px 0 40px 0}
+    .services-item-ctrl {padding:27px 0 40px 0}
     .services-item-detail {margin:0 0 0 24px}
     .services-more-btn {display:block; text-align:center; margin:60px 0 0 0}
     .services-more-btn.invisible {display:none}
@@ -1123,7 +1127,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-service {width:1134px; padding:97px 177px 145px 177px}
 .window-service-logo {line-height:0}
 .window-service h1 {margin:32px 0 16px 0}
-.window-service-text {font-size:24px; line-height:30px; margin:16px 0 32px 0}
+.window-service-text {font-size:20px; line-height:28px; margin:16px 0 32px 0}
 .window-service-steps {margin:64px 0 -27px 0; position:relative; font-size:18px; line-height:27px; border-top:1px solid rgba(22, 48, 114, 0.4); display:table; width:100%}
 .window-service-step {display:table-cell; vertical-align:top; position:relative; text-align:left; padding:45px 10px 0 0}
 .window-service-step:before {content:""; display:block; position:absolute; left:0; top:0; width:14px; height:14px; background:#163072; border-radius:50%; transform:translateY(-50%)}
@@ -1135,7 +1139,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 .window-service-step-notice {font-weight:300; opacity:0.34; color:#000; padding:10px 0 0 0}
 .window-service-step:last-child {padding-right:0; text-align:right}
 .window-service-step:last-child:before {left:auto; right:0}
-.window-service-links {margin:55px 0 0 0}
+.window-service-links {margin:75px 0 0 0}
 .window-service-links:after {content:""; display:block; clear:both}
 .window-service-link-order {float:left}
 .window-service-link-order .btn {text-transform:none; font-size:17px; font-weight:normal}
@@ -1170,7 +1174,7 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 @media (max-width:1279px) {
     .window-service {width:578px; padding:59px 85px 67px 85px}
     .window-service h1 {margin:32px 0 30px 0}
-    .window-service-text {font-size:20px; line-height:34px; margin:30px 0 32px 0}
+    .window-service-text {font-size:16px; line-height:24px; margin:20px 0 22px 0}
     .window-service-steps {margin:72px 0 0 0; text-align:left; border-top:none; padding:0; font-size:18px; line-height:27px}
     .window-service-steps:before {content:""; display:block; position:absolute; left:50%; top:0; bottom:0; width:1px; margin-left:-1px; background:rgba(22, 48, 114, 0.4)}
     .window-service-steps:after {display:none}
@@ -1184,9 +1188,9 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
     .window-service-step:last-child {width:auto}
     .window-service-step:last-child:after {content:""; display:block; position:absolute; left:100%; margin-left:-1px; top:15px; bottom:0; width:1px; background:#fff}
     .window-service-step:nth-child(even):last-child:after {left:0}
-    .window-service-links {text-align:center}
+    .window-service-links {text-align:center; margin-bottom:60px}
     .window-service-link-order {float:none}
-    .window-service-link-detail {float:none; margin:52px 0 0 0; line-height:23px}
+    .window-service-link-detail {float:none; margin:22px 0 0 0; line-height:23px}
     .window-service-info-title {font-size:24px; margin:100px 0 0 0}
     .window-service-info-row-title {font-size:18px; line-height:30px}
 }
