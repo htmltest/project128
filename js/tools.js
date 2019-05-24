@@ -85,9 +85,6 @@ $(document).ready(function() {
                 $('.slider-prev').trigger('click');
             }
         },
-        threshold: 0,
-        triggerOnTouchEnd: false,
-        triggerOnTouchLeave: true,
         allowPageScroll: 'auto'
     });
 
@@ -338,19 +335,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.up-link').click(function(e) {
-        $('html, body').animate({'scrollTop': 0});
-        e.preventDefault();
-    });
-
-});
-
-$(window).on('load resize scroll', function() {
-    if ($(window).scrollTop() > $(window).height()) {
-        $('.up-link').addClass('visible');
-    } else {
-        $('.up-link').removeClass('visible');
-    }
 });
 
 function randomInteger(min, max) {
