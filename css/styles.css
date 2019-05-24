@@ -524,11 +524,15 @@ blockquote:before {content:""; display:block; position:absolute; left:0; top:8px
 
 @media (max-width:767px) {
     .index-table-mobile-header {left:30px}
-    .index-table-name {padding:0 30px 0 169px; color:#323232}
+    .index-table-name,
+    .index-table-row:hover .index-table-name {padding:0 30px 0 169px; color:#323232}
     .index-table-name-logo {display:none}
-    .index-table-geo {padding:0 30px 0 169px; color:#323232}
-    .index-table-sector {padding:0 30px 0 169px; color:#323232}
-    .index-table-achievs {padding:0 30px 0 169px; color:#323232}
+    .index-table-geo,
+    .index-table-row:hover .index-table-geo {padding:0 30px 0 169px; color:#323232}
+    .index-table-sector,
+    .index-table-row:hover .index-table-sector {padding:0 30px 0 169px; color:#323232}
+    .index-table-achievs,
+    .index-table-row:hover .index-table-achievs {padding:0 30px 0 169px; color:#323232}
 }
 
 .index-sign-in {padding:50px 0 0 0; text-align:center}
