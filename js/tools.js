@@ -839,10 +839,18 @@ function windowOpen(linkWindow, dataWindow) {
     }
 
     var curPadding = $('.wrapper').width();
+    var curWidth = $(window).width();
+    if (curWidth < 480) {
+        curWidth = 480;
+    }
+    var curScroll = $(window).scrollTop();
     $('html').addClass('window-open');
     curPadding = $('.wrapper').width() - curPadding;
     $('body').css({'margin-right': curPadding + 'px'});
     $('body').append('<div class="window"><div class="window-loading"></div></div>')
+    $('.wrapper').css({'top': -curScroll});
+    $('.wrapper').data('curScroll', curScroll);
+    $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
 
     $.ajax({
         type: 'POST',
@@ -960,5 +968,8 @@ function windowClose() {
         $('.window').remove();
         $('html').removeClass('window-open');
         $('body').css({'margin-right': 0});
+        $('.wrapper').css({'top': 0});
+        $(window).scrollTop($('.wrapper').data('curScroll'));
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
     }
 }
